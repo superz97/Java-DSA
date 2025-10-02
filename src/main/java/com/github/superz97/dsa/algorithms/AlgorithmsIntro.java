@@ -8,7 +8,7 @@ public class AlgorithmsIntro {
 
     public static List<Integer> generateRandomListOfIntegers(int min, int max, int size) {
         List<Integer> randomList = new ArrayList<>();
-        Random  random = new Random();
+        Random random = new Random();
         for (int i = 0; i < size; i++) {
             int randomNumber = random.nextInt(max - min + 1) + min;
             randomList.add(randomNumber);
@@ -27,6 +27,17 @@ public class AlgorithmsIntro {
             }
         }
         return minimum;
+    }
+
+    public static int findSum(List<Integer> numbers) {
+        int sum = 0;
+        if (numbers == null || numbers.isEmpty()) {
+            return 0;
+        }
+        for (Integer number : numbers) {
+            sum += number;
+        }
+        return sum;
     }
 
 }
